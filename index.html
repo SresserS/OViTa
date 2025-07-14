@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="O-ViTa: Object-Centric Visuo-Tactile Learning from Human Demonstrations for Robot Manipulation">
+    <meta name="keywords" content="Object-centric robot manipulation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>O-ViTa: Object-Centric Visuo-Tactile Learning from Human Demonstrations for Robot Manipulation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">O-ViTa: Object-Centric Visuo-Tactile Learning from Human Demonstrations for Robot Manipulation</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                Kuanning Wang<sup>1*</sup>,
+                                Ke Fan<sup>1*</sup>,
+                                Yuqian Fu<sup>2</sup>,
+                                Siyu Lin<sup>1</sup>,
+                                Hu Luo<sup>1</sup>,
+                                Yanwei Fu<sup>1</sup>,
+                                Wenming Chen<sup>1</sup>,
+                                Zuxuan Wu<sup>1</sup>,
+                                Xiangyang Xue<sup>1</sup>,
+                                Yu-Gang Jiang<sup>1</sup>,
+
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <sup>1</sup><span class="author-block">Fudan University</span>,
+                            <sup>2</sup><span class="author-block">INSAIT, Sofia University</span>,
+                        </div>
+
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">Preprint. Work in Progress</span>
+                        </div>
+
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper (Comming Soon)</span>
+                                    </a>
+                                </span>
+                                <!-- <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv (Comming Soon)</span>
+                                    </a>
+                                </span> -->
+
+                                <!-- <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code (Comming Soon)</span>
+                                    </a>
+                                </span> -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <div class="container is-max-desktop">
+          <!-- Abstract. -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Recent advances in Vision-Action and Vision-Language Action models, such as Diffusion Policy, OpenVLA, and $\pi_0$, have significantly improved robotic manipulation by enabling robots to interpret visual information for complex tasks. However, these approaches face key limitations: collecting large-scale real-world robot data is costly and inefficient, and reliance on robot-specific internal states hinders generalization across different platforms. Moreover, existing methods often overlook the importance of direct object perception and manipulation. In this paper, we present Object-Centric Visuo-Tactile Learning (\method), a novel framework for robotic manipulation that leverages only human demonstration videos and tactile signals. Our method extracts object-centric representations and 3D object trajectories from human demonstration videos, removing the need for robot-specific demonstrations and decoupling policy learning from the robot’s morphology. Furthermore, we introduce a portable visuo-tactile data collection system, which fuses external visual object tracking with tactile force feedback to capture fine-grained object interactions. Experimental results demonstrate that \method enables more flexible, robust, and generalizable robotic manipulation by directly grounding learning in object-centric perception and multimodal interaction.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--/ Abstract. -->
+      
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h3 class="title is-3">Hardware Setup</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                          This figure illustrates the setup of our proposed framework from (A) to (C).
+                          First, Part(A) is the coordinate system representing the human-operated demonstration data collection setup. Second, Part(B) shows the different modalities of data collected during human demonstrations. Third, Part(C) is the deployment of the learned algorithm on the robot, which is trained using the human demonstration data. 
+                          The video data used for training only includes observations from external cameras.
+                          The camera mounted on the handheld gripper is used solely to determine the gripper’s opening and closing status, and does not provide any trajectory information.
+                        </p>
+                        <!-- Add image here -->
+                        <img src="static/images/setup.png" alt="Visualization" style="max-width: 100%; height: auto; margin-top: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                  <h3 class="title is-3">Framework</h3>
+                  <div class="content has-text-justified">
+                      <p>
+                        The right side of the framework illustrates the core architecture of the Diffusion Policy, where predicted actions are obtained by denoising the input noisy actions. The left side represents the conditioning information provided to the Diffusion Policy.The condition module processes multi-modal inputs, including tactile signals from the left and right fingers of the gripper, RGB images along with their corresponding depth maps. For the RGB input, we employ GroundingDINO and SAM2 to generate segmentation masks for relevant objects, which are categorized into a Manipulable Mask for the target object being manipulated and an Other Mask for surrounding objects. The RGB image is further processed by VGGT to extract pixel-wise dense features, from which object-level features are computed using the corresponding masks. The depth map is back-projected into a point cloud to provide 3D spatial information. These inputs are then passed through dedicated encoders to extract modality-specific features: Tactile Features, VGGT Features, and Point Cloud Features. The resulting features are concatenated and used as the condition for the Diffusion Policy.
+                      </p>
+                      <!-- Add image here -->
+                      <img src="static/images/framework.png" alt="Visualization" style="max-width: 100%; height: auto; margin-top: 20px;">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h3 class="title is-3">Experiments Visualization</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                          This figure provides a visual illustration of the data and deployment process across different tasks.
+                          The first row shows the data collected during human demonstrations, where the gripper is operated by hand to perform the tasks.
+                          The second row presents the robot's initial state when the trained model is deployed, showing the first frame of execution.
+                          The third row displays the scene after the robot has executed the task for n steps.
+                        </p>
+                        <!-- Add image here -->
+                        <img src="static/images/experiments.png" alt="Visualization" style="max-width: 100%; height: auto; margin-top: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+      
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website template is borrowed from <a
+                                href="https://github.com/nerfies/nerfies.github.io">nerfies.github.io</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
